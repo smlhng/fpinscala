@@ -51,9 +51,10 @@ object List { // `List` companion object. Contains functions for creating and wo
 
 
   def tail[A](l: List[A]): List[A] = {
-    l match
+    l match {
       case Nil => Nil
-      case _ :: t => t
+      case Cons(_, t) => t
+    }
   }
 
   def setHead[A](l: List[A], h: A): List[A] = ???
